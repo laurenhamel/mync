@@ -30,31 +30,37 @@ program
 // Create `list` command.
 program
   .command('list')
-  .description('lists all sync configurations in the config file')
+  .description('lists the settings by name in the config file')
   .action(commands.list);
+
+// Create `info` command.
+program
+  .command('info [name]')
+  .description('gets more info about a setting in the config file')
+  .action(commands.info);
 
 // Create `sync` command.
 program
   .command('sync')
-  .description('syncs all storage files with your system')
+  .description('syncs all storage contents with your system')
   .action(commands.sync);
 
 // Create `unsync` command.
 program
   .command('unsync')
-  .description('unsyncs all storage files with your system')
+  .description('unsyncs all storage contents with your system')
   .action(commands.unsync);
 
 // Create `add` command.
 program
   .command('add [name] [src] [dest]')
-  .description('adds a new file or folder to storage')
+  .description('adds new contents to storage')
   .action(commands.add);
 
 // Create `remove` command.
 program
   .command('remove [name]')
-  .description('removes a file or folder from storage')
+  .description('removes some contents from storage')
   .action(commands.remove);
 
 // Create `restore` command.

@@ -1,37 +1,40 @@
 {
-  "storage": ":icloud",
+  "storage": {
+    "root": ":icloud",
+    "directory": "Mync"
+  },
   "routes": {
     "home": "~",
     "apps": "~/Applications/",
-    "appdata": "~/Library/\"Application Support\"/",
+    "appdata": "~/Library/Application Support/",
     "appprefs": "~/Library/Preferences/",
-    "icloud": "~/Library/\"Mobile Documents\"/com~apple~CloudDocs/",
+    "icloud": "~/Library/Mobile Documents/com~apple~CloudDocs/",
     "dropbox": "~/Dropbox/",
-    "onedrive": "~/OneDrive",
+    "onedrive": "~/OneDrive/",
     "odrive": "~/odrive/",
-    "box": "~/\"Box Sync\"/",
-    "googledrive": "~/\"Google Drive\"/"
+    "box": "~/Box Sync/",
+    "googledrive": "~/Google Drive/"
   },
-  "sync": [
+  "settings": [
     {
       "name": "Adobe Creative Cloud",
       "src": "Adobe/\"Creative Cloud\"/",
-      "dest": ":appdata/Adobe/\"Creative Cloud Libraries\"/LIBS/"
+      "dest": ":appdata/Adobe/Creative Cloud Libraries/LIBS/"
     },
     {
       "name": "Adobe XD",
       "src": "Adobe/XD/",
-      "dest": ":appdata/Adobe/\"Adobe XD CC\"/"
+      "dest": ":appdata/Adobe/Adobe XD CC/"
     },
     {
       "name": "Adobe Illustrator",
       "src": "Adobe/Illustrator/",
-      "dest": ":appprefs/\"Adobe Illustrator 22 Settings\"/en_US/"
+      "dest": ":appprefs/Adobe Illustrator 22 Settings/en_US/"
     },
     {
       "name": "Adobe Photoshop",
       "src": "Adobe/Photoshop/",
-      "dest": ":appprefs/\"Adobe Photoshop CC 2018 Settings\"/"
+      "dest": ":appprefs/Adobe Photoshop CC 2018 Settings/"
     },
     {
       "name": "Apache.conf",
@@ -71,22 +74,22 @@
     {
       "name": "Brackets",
       "src": "Brackets/",
-      "dest": ":appdata\"/Brackets/"
+      "dest": ":appdata/Brackets/"
     },
     {
       "name": "Draw.io",
       "src": "Draw.io/",
-      "dest": ":appdata\"/draw.io/"
+      "dest": ":appdata/draw.io/"
     },
     {
       "name": "Inkdrop",
       "src": "Inkdrop/",
-      "dest": ":appdata\"/inkdrop/"
+      "dest": ":appdata/inkdrop/"
     },
     {
       "name": "Sequel Prop",
       "src": "\"Sequel Pro\"",
-      "dest": ":appdata/\"Sequel Pro\"/Data/"
+      "dest": ":appdata/Sequel Pro/Data/"
     },
     {
       "name": "Spectacle",

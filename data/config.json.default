@@ -7,12 +7,12 @@
     "appprefs": "~/Library/Preferences/",
     "icloud": "~/Library/\"Mobile Documents\"/com~apple~CloudDocs/",
     "dropbox": "~/Dropbox/",
-    "onedrive": "~/OneDrive",
+    "onedrive": "~/OneDrive/",
     "odrive": "~/odrive/",
     "box": "~/\"Box Sync\"/",
     "googledrive": "~/\"Google Drive\"/"
   },
-  "sync": [
+  "settings": [
     {
       "name": "Adobe Creative Cloud",
       "src": "Adobe/\"Creative Cloud\"/",
