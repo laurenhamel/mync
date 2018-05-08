@@ -1,0 +1,23 @@
+{
+  "name": "msynq",
+  "version": "0.0.1",
+  "description": "A command-line tool for syncing configurations and settings across Macs",
+  "main": "msynq.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurenhamel/msynq.git"
+  },
+  "author": "Lauren Hamel",
+  "license": "MIT",
+  "bin": {
+    "msynq": "./msynq.js"
+  },
+  "bugs": {
+    "url": "https://github.com/laurenhamel/msynq/issues"
+  },
+  "homepage": "https://github.com/laurenhamel/msynq#readme",
+  "dependencies": {
+    "vorpal": "^1.12.0"
+  }
+}
