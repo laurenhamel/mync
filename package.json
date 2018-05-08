@@ -11,7 +11,7 @@
   "author": "Lauren Hamel",
   "license": "MIT",
   "bin": {
-    "msynq": "./msynq.js"
+    "msynq": "./bin/msynq"
   },
   "bugs": {
     "url": "https://github.com/laurenhamel/msynq/issues"
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/laurenhamel/msynq#readme",
   "dependencies": {
     "chalk": "^2.4.1",
-    "commander": "^2.15.1"
+    "commander": "^2.15.1",
+    "path": "^0.12.7",
+    "prompt": "^1.0.0"
   }
 }
