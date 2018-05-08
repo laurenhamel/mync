@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/laurenhamel/msynq#readme",
   "dependencies": {
-    "vorpal": "^1.12.0"
+    "commander": "^2.15.1"
   }
 }
