@@ -1,0 +1,102 @@
+{
+  "storage": ":icloud",
+  "routes": {
+    "home": "~",
+    "apps": "~/Applications/",
+    "appdata": "~/Library/\"Application Support\"/",
+    "appprefs": "~/Library/Preferences/",
+    "icloud": "~/Library/\"Mobile Documents\"/com~apple~CloudDocs/",
+    "dropbox": "~/Dropbox/",
+    "onedrive": "~/OneDrive",
+    "odrive": "~/odrive/",
+    "box": "~/\"Box Sync\"/",
+    "googledrive": "~/\"Google Drive\"/"
+  },
+  "sync": [
+    {
+      "name": "Adobe Creative Cloud",
+      "src": "Adobe/\"Creative Cloud\"/",
+      "dest": ":appdata/Adobe/\"Creative Cloud Libraries\"/LIBS/"
+    },
+    {
+      "name": "Adobe XD",
+      "src": "Adobe/XD/",
+      "dest": ":appdata/Adobe/\"Adobe XD CC\"/"
+    },
+    {
+      "name": "Adobe Illustrator",
+      "src": "Adobe/Illustrator/",
+      "dest": ":appprefs/\"Adobe Illustrator 22 Settings\"/en_US/"
+    },
+    {
+      "name": "Adobe Photoshop",
+      "src": "Adobe/Photoshop/",
+      "dest": ":appprefs/\"Adobe Photoshop CC 2018 Settings\"/"
+    },
+    {
+      "name": "Apache.conf",
+      "src": "Apache/httpd.conf",
+      "dest": "/etc/apache2/httpd.conf"
+    },
+    {
+      "name": "Apache.vhosts",
+      "src": "Apache/vhosts.conf",
+      "dest": "/etc/apache2/extra/httpd-vhosts.conf"
+    },
+    {
+      "name": "Apache.user",
+      "src": "Apache/user.conf",
+      "dest": "/private/etc/apache2/users/$(whoami).conf"
+    },
+    {
+      "name": "Apache.phposx",
+      "src": "Apache/phposx.conf",
+      "dest": "/etc/apache2/other/+php-osx.conf"
+    },
+    {
+      "name": "PHP.ini",
+      "src": "PHP/php.ini",
+      "dest": "/private/etc/php.ini"
+    },
+    {
+      "name": "PHP.phposx",
+      "src": "PHP/phposx.ini",
+      "dest": "/usr/local/php5/php.d/99-liip-developer.ini"
+    },
+    {
+      "name": "Bash.profile",
+      "src": "Bash/bash.profile",
+      "dest": ":home/.bash_profile"
+    },
+    {
+      "name": "Brackets",
+      "src": "Brackets/",
+      "dest": ":appdata\"/Brackets/"
+    },
+    {
+      "name": "Draw.io",
+      "src": "Draw.io/",
+      "dest": ":appdata\"/draw.io/"
+    },
+    {
+      "name": "Inkdrop",
+      "src": "Inkdrop/",
+      "dest": ":appdata\"/inkdrop/"
+    },
+    {
+      "name": "Sequel Prop",
+      "src": "\"Sequel Pro\"",
+      "dest": ":appdata/\"Sequel Pro\"/Data/"
+    },
+    {
+      "name": "Spectacle",
+      "src": "Spectacle/",
+      "dest": ":appdata/Spectacle/"
+    },
+    {
+      "name": "Transmit",
+      "src": "Transmit/",
+      "dest": ":appdata/Transmit/"
+    }
+  ]
+}
