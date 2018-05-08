@@ -11,7 +11,7 @@
   "author": "Lauren Hamel",
   "license": "MIT",
   "bin": {
-    "msynq": "./bin/mync"
+    "mync": "./bin/mync"
   },
   "bugs": {
     "url": "https://github.com/laurenhamel/msynq/issues"
