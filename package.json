@@ -19,9 +19,16 @@
   "homepage": "https://github.com/laurenhamel/msynq#readme",
   "dependencies": {
     "chalk": "^2.4.1",
+    "child_process": "^1.0.2",
     "commander": "^2.15.1",
+    "deferred-js": "^1.0.2",
+    "fs-extra": "^6.0.0",
+    "mkdirp": "^0.5.1",
+    "node-machine-id": "^1.1.10",
     "path": "^0.12.7",
     "prompt": "^1.0.0",
-    "untildify": "^3.0.2"
+    "prompt-async": "^0.9.9",
+    "untildify": "^3.0.2",
+    "username": "^3.0.0"
   }
 }

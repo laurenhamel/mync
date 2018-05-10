@@ -24,50 +24,74 @@ program
 // Create `config` command.
 program
   .command('config')
-  .description('opens the Msynq config file for editing')
+  .description('opens the configuration file for editing')
   .action(commands.config);
 
 // Create `list` command.
 program
   .command('list')
-  .description('lists the settings by name in the config file')
+  .description('lists the settings by name in the configuration file')
   .action(commands.list);
 
 // Create `info` command.
 program
   .command('info [name]')
-  .description('gets more info about a setting in the config file')
+  .description('gets additional information about a settinging in the configuration file')
   .action(commands.info);
 
 // Create `sync` command.
 program
   .command('sync')
-  .description('syncs all storage contents with your system')
+  .description('syncs settings with your workstation')
+  .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.sync);
 
 // Create `unsync` command.
 program
   .command('unsync')
-  .description('unsyncs all storage contents with your system')
+  .description('unsyncs settings with your workstation')
+  .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.unsync);
 
 // Create `add` command.
 program
   .command('add [name] [src] [dest]')
-  .description('adds new contents to storage')
+  .description('adds a new setting to the configuration file')
   .action(commands.add);
 
 // Create `remove` command.
 program
   .command('remove [name]')
-  .description('removes some contents from storage')
+  .description('removes a setting from the configuration file')
   .action(commands.remove);
+
+// Create `backup` command.
+program
+  .command('backup')
+  .description('backs up the default workspace settings')
+  .action(commands.backup);
 
 // Create `restore` command.
 program
   .command('restore')
-  .description('restores the default Msynq configurations')
+  .description('restores the default workspace settings')
   .action(commands.restore);
+
+// Create `push` command.
+program 
+  .command('push')
+  .description('pushes settings from your workstation to storage')
+  .option('-o, --overwrite', 'Forces overwriting of existing settings in storage')
+  .option('-v, --verbose', 'Outputs additional status messages to the console')
+  .action(commands.push);
+
+// Create `pull` command.
+program 
+  .command('pull')
+  .description('pulls settings from storage to your workstation')
+  .option('-o, --overwrite', 'Forces overwriting of existing settings on your workstation')
+  .option('-v, --verbose', 'Outputs additional status messages to the console')
+  .action(commands.pull);
   
 // Start the program.
 program.parse(process.argv);
