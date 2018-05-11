@@ -1,7 +1,7 @@
 {
   "name": "mync",
   "version": "0.0.1",
-  "description": "A command-line tool for syncing configurations and settings across Macs",
+  "description": "A configurable command-line tool for syncing your settings across Macs",
   "main": "mync.js",
   "scripts": {},
   "repository": {
