@@ -31,5 +31,8 @@
     "prompt-async": "^0.9.9",
     "untildify": "^3.0.2",
     "username": "^3.0.0"
-  }
+  },
+  "os": [
+    "darwin"
+  ]
 }
