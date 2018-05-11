@@ -56,7 +56,7 @@ program
 
 // Create `add` command.
 program
-  .command('add [name] [src] [dest]')
+  .command('add')
   .description('adds a new setting to the configuration file')
   .action(commands.add);
 
