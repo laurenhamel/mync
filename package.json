@@ -21,6 +21,7 @@
     "chalk": "^2.4.1",
     "child_process": "^1.0.2",
     "commander": "^2.15.1",
+    "deepcopy": "^0.6.3",
     "deferred-js": "^1.0.2",
     "fs-extra": "^6.0.0",
     "mkdirp": "^0.5.1",

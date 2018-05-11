@@ -1,16 +1,17 @@
 #!/usr/bin/env Node
 
-// Load configurations.
-let config = require('./data/config.json');
-
 // Load dependencies.
 const program   = require('commander');
+const deepcopy  = require('deepcopy');
 const package   = require('./package.json');
 const commands  = require('./lib/commands.js')();
 const logger    = require('./lib/logger.js')();
 
 // Load utilities.
 require('./lib/prototypes.js');
+
+// Load configurations.
+let config      = deepcopy(require('./data/config.json'));
       
 // Set the program version.
 program .version(package.version);
