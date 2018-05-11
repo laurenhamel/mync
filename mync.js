@@ -24,7 +24,7 @@ program
 
 // Create `config` command.
 program
-  .command('config')
+  .command('config [app]')
   .description('opens the configuration file for editing')
   .action(commands.config);
 
