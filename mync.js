@@ -47,6 +47,11 @@ program
   .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.sync);
 
+program
+  .command('status')
+  .description('tells you whether or not your workstation is currently synced with Mync')
+  .action(commands.status);
+
 // Create `unsync` command.
 program
   .command('unsync')
