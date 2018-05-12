@@ -34,5 +34,13 @@
   },
   "os": [
     "darwin"
+  ],
+  "keywords": [
+    "nodejs",
+    "cli",
+    "backup",
+    "sync",
+    "macosx",
+    "cloud"
   ]
 }
