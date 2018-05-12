@@ -21,7 +21,13 @@ Mync can be configured to backup and sync your system configurations and applica
 
 ## Getting Started
 
-Before you can start syncing across workstations, you'll need to add something to storage.
+First, install Mync.
+
+```
+npm install -g mync
+```
+
+Then, before you can start syncing across workstations, you'll need to add something to storage.
 
 1. Optionally, configure Mync. See [Managing Configurations](#managing-configurations).
 
@@ -56,7 +62,7 @@ Pushes your workstation's settings to storge
 
 | Options             | Description                                             |
 |---------------------|---------------------------------------------------------|
-| `-v`, `--verbose`   | Outputs additional messages to the console              | 
+| `-v`, `--verbose`   | Outputs additional messages to the console              |
 | `-o`, `--overwrite` | Forces overwriting of all settings on your workstation  |
 
 ### `mync pull`
@@ -65,7 +71,7 @@ Pulls a copy of whatever settings are in storage onto your current workstation
 
 | Options             | Description                                             |
 |---------------------|---------------------------------------------------------|
-| `-v`, `--verbose`   | Outputs additional messages to the console              | 
+| `-v`, `--verbose`   | Outputs additional messages to the console              |
 | `-o`, `--overwrite` | Forces overwriting of all settings on your workstation  |
 
 > `mync pull` works similarly to performing `mync sync` then `mync unsync` in sequence.
@@ -137,7 +143,7 @@ By default, Mync uses **iCloud Drive** for storage. If you prefer to use some el
 
 Mync using a `.json` file to manage its configuration data. This file can be edited directly using `mync config`. Alternatively, settings can be added or removed from the configuration file using `mync add` or `mync remove`, respectively. It's recommended that all settings within your configuration file follow a few simple rules for best results:
 
-- Keep your setting names `unique`. 
+- Keep your setting names `unique`.
 - All `src` paths are always relative to the `storage` location.
 - You can define new `routes` and utilize them like `:route`.
 - The `$username` variable will be replaced with your username on your workstation.
