@@ -41,6 +41,8 @@ Then, before you can start syncing across workstations, you'll need to add somet
 
 5. Check the status of your workstation at anytime using `mync status`.
 
+And finally, on your other workstations, install and sync your settings with `mync sync`.
+
 
 ## Advanced Usage
 
