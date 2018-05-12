@@ -37,7 +37,7 @@ Then, before you can start syncing across workstations, you'll need to add somet
 
 3. Add your workstation's settings to storage with `mync push`.
 
-4. Start synching your workstations with `mync sync`.
+4. Start syncing your workstations with `mync sync`.
 
 5. Check the status of your workstation at anytime using `mync status`.
 
