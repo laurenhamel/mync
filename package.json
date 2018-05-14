@@ -6,7 +6,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laurenhamel/msynq.git"
+    "url": "git+https://github.com/laurenhamel/mync.git"
   },
   "author": "Lauren Hamel",
   "license": "MIT",
@@ -14,9 +14,9 @@
     "mync": "./bin/mync"
   },
   "bugs": {
-    "url": "https://github.com/laurenhamel/msynq/issues"
+    "url": "https://github.com/laurenhamel/mync/issues"
   },
-  "homepage": "https://github.com/laurenhamel/msynq#readme",
+  "homepage": "https://github.com/laurenhamel/mync#readme",
   "dependencies": {
     "chalk": "^2.4.1",
     "child_process": "^1.0.2",
