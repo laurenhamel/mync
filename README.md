@@ -16,7 +16,7 @@ Mync is intended to be an easy-to-use CLI for syncing your workstation configura
 
 ## How it Works
 
-Mync can be configured to backup and sync your system configurations and application settings across various Macs. This can be useful for eliminating the painstaking process of setting up a new workstation or can simply be used to ensure sure that all of your existing workstations remain in sync. When syncing, Mync will backup your system's current state to the storage location of your choosing and create symbolic links on your system pointing to your stored configuration data. When unsyncing, Mync will replace those symbolic links it previously created with a hard copy of the file or folder it has saved in storage.
+Mync can be configured to backup and sync your system configurations and application settings across various Macs. This can be useful for eliminating the painstaking process of setting up a new workstation or can simply be used to ensure that all of your existing workstations remain in sync. When syncing, Mync will backup your system's current state to the storage location of your choosing and create symbolic links on your system pointing to your stored configuration data. When unsyncing, Mync will replace those symbolic links it previously created with a hard copy of the file or folder it has saved in storage.
 
 
 ## Getting Started
@@ -41,7 +41,7 @@ Then, before you can start syncing across workstations, you'll need to add somet
 
 5. Check the status of your workstation at anytime using `mync status`.
 
-And finally, on your other workstations, install and sync your settings with `mync sync`.
+And finally, on your other workstations, install Mync and instantly backup your workstation and sync your settings with `mync sync`.
 
 
 ## Advanced Usage
@@ -56,7 +56,7 @@ Backs up your workstation's settings
 
 ### `mync restore`
 
-Restore your workstation's settings from its backup
+Restores your workstation's settings from its backup
 
 ### `mync push`
 
@@ -65,7 +65,7 @@ Pushes your workstation's settings to storge
 | Options             | Description                                             |
 |---------------------|---------------------------------------------------------|
 | `-v`, `--verbose`   | Outputs additional messages to the console              |
-| `-o`, `--overwrite` | Forces overwriting of all settings on your workstation  |
+| `-o`, `--overwrite` | Forces overwriting of all settings in storage           |
 
 ### `mync pull`
 
@@ -112,20 +112,20 @@ Displays the sync status of your current workstation
 
 ### `mync list`
 
-List the names of settings in Mync's configuration file
+Lists the names of the settings in Mync's configuration file
 
 ### `mync info [name]`
 
 Retrieves more information about a given setting in Mync's configuration file by setting `name`
 
-### `mync [-h | --help]`
+### `mync [-h || --help]`
 
 Displays some help
 
 
 ## Changing Storages
 
-By default, Mync uses **iCloud Drive** for storage. If you prefer to use some else, you can change the storage location using the `mync storage` command or by editing the configuration file directly with `mync config`.  The configuration file has some preset `routes` defined, which can also be used. These include:
+By default, Mync uses **iCloud Drive** for storage. If you prefer to use something else, you can change the storage location using the `mync storage` command or by editing the configuration file directly with `mync config`.  The configuration file has some preset `routes` defined, which can also be used, or you can add your own. These include:
 
 | Route             | Path                                              |
 |-------------------|---------------------------------------------------|
@@ -145,17 +145,19 @@ By default, Mync uses **iCloud Drive** for storage. If you prefer to use some el
 
 Mync using a `.json` file to manage its configuration data. This file can be edited directly using `mync config`. Alternatively, settings can be added or removed from the configuration file using `mync add` or `mync remove`, respectively. It's recommended that all settings within your configuration file follow a few simple rules for best results:
 
-- Keep your setting names `unique`.
+- Keep your setting names **unique**.
 - All `src` paths are always relative to the `storage` location.
 - You can define new `routes` and utilize them like `:route`.
 - The `$username` variable will be replaced with your username on your workstation.
 - Keep `files` and `folders` as immediate children of the `dest` path.
 
-> Mync will attempt to manipulate all settings given in the configuration file but may run into some permissions errors during execution for certain files and/or folders. For example, Apache and PHP files can be backed up and pushed into storage for universal availability, but Mync will likely run into permissions error when attempting to sync these files across workstations.
+> Mync will attempt to manipulate all settings given in the configuration file but may run into some permissions errors during execution for certain files and/or folders. For example, Apache and PHP files can be backed up and pushed into storage for universal availability, but Mync will likely run into permissions error when attempting to sync or pull these files with workstations.
+
 
 ## Why Mync
 
 Mync was born out of sheer frustration of always having to copy system settings and application configurations across workstations. Now, it's never been easier to switch from your work computer to your personal setup and back again. With Mync, you're able to keep all your Macs in sync all the time.
+
 
 ## Become a Contributor
 
