@@ -1,4 +1,3 @@
 #!/usr/bin/env Node
 
 require('../mync.js');
-require('../lib/setup.js')
