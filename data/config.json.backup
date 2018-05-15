@@ -1,0 +1,176 @@
+{
+  "storage": {
+    "root": ":icloud",
+    "directory": "Mync"
+  },
+  "routes": {
+    "home": "~",
+    "apps": "~/Applications/",
+    "appdata": "~/Library/Application Support/",
+    "appprefs": "~/Library/Preferences/",
+    "icloud": "~/Library/Mobile Documents/com~apple~CloudDocs/",
+    "dropbox": "~/Dropbox/",
+    "onedrive": "~/OneDrive/",
+    "odrive": "~/odrive/",
+    "box": "~/Box Sync/",
+    "gdrive": "~/Google Drive/"
+  },
+  "settings": [
+    {
+      "name": "Adobe Creative Cloud",
+      "src": "Adobe/Creative Cloud/",
+      "dest": ":appdata/Adobe/Creative Cloud Libraries/LIBS/",
+      "files": [
+        "settings.json"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Adobe XD",
+      "src": "Adobe/XD/",
+      "dest": ":appdata/Adobe/Adobe XD CC/",
+      "files": [
+        "preferences.json"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Adobe Illustrator",
+      "src": "Adobe/Illustrator/",
+      "dest": ":appprefs/Adobe Illustrator 22 Settings/en_US/",
+      "files": [
+        "Adobe Illustrator Prefs",
+        "Adobe Illustrator Cloud Prefs",
+        "AI Color Settings",
+        "PresetDocumentProfileData.json"
+      ],
+      "folders": [
+        "Modified Workspaces"
+      ]
+    },
+    {
+      "name": "Adobe Photoshop",
+      "src": "Adobe/Photoshop/",
+      "dest": ":appprefs/Adobe Photoshop CC 2018 Settings/",
+      "files": [
+        "Adobe Photoshop CC 2018 Prefs.psp",
+        "UIPrefs.psp",
+        "Workspace Prefs.psp"
+      ],
+      "folders": [
+        "WorkSpaces (Modified)"
+      ]
+    },
+    {
+      "name": "Apache.conf",
+      "src": "Apache/",
+      "dest": "/etc/apache2/",
+      "files": [
+        "httpd.conf"
+      ],
+      "folders": [
+        "virtualhosts"
+      ]
+    },
+    {
+      "name": "Apache.vhosts",
+      "src": "Apache/",
+      "dest": "/etc/apache2/extra/",
+      "files": [
+        "httpd-vhosts.conf"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Apache.user",
+      "src": "Apache/user.conf",
+      "dest": "/private/etc/apache2/users/$username.conf"
+    },
+    {
+      "name": "Apache.phposx",
+      "src": "Apache/",
+      "dest": "/usr/local/php5/",
+      "files": [
+        "entropy-php.conf"
+      ],
+      "folders": []
+    },
+    {
+      "name": "PHP.conf",
+      "src": "PHP/",
+      "dest": "/private/etc/",
+      "files": [
+        "php.ini"
+      ],
+      "folders": []
+    },
+    {
+      "name": "PHP.phposx",
+      "src": "PHP/",
+      "dest": "/usr/local/php5/php.d/",
+      "files": [
+        "99-liip-developer.ini"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Bash",
+      "src": "Bash/",
+      "dest": ":home/",
+      "files": [
+        ".bash_profile"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Brackets",
+      "src": "Brackets/",
+      "dest": ":appdata/Brackets/",
+      "files": [
+        "brackets.json"
+      ],
+      "folders": [
+        "extensions"
+      ]
+    },
+    {
+      "name": "Inkdrop",
+      "src": "Inkdrop/",
+      "dest": ":appdata/inkdrop/",
+      "files": [
+        "keymap.cson",
+        "config.cson"
+      ],
+      "folders": [
+        "packages"
+      ]
+    },
+    {
+      "name": "Sequel Pro",
+      "src": "Sequel Pro/",
+      "dest": ":appdata/Sequel Pro/Data/",
+      "files": [
+        "Favorites.plist"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Spectacle",
+      "src": "Spectacle/",
+      "dest": ":appdata/Spectacle/",
+      "files": [
+        "Shortcuts.json"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Transmit",
+      "src": "Transmit/",
+      "dest": ":appdata/Transmit/",
+      "files": [
+        "Connections.transmitstore"
+      ],
+      "folders": []
+    }
+  ]
+}
