@@ -29,17 +29,17 @@ npm install -g mync
 
 Then, before you can start syncing across workstations, you'll need to add something to storage.
 
-1. Optionally, configure Mync. See [Managing Configurations](#managing-configurations).
+1. Optionally, set your preferred storage location. See [Changing Storages](#changing-storages).
 
-2. Optionally, set your preferred storage location. See [Changing Storages](#changing-storages).
+2. Optionally, configure Mync. See [Managing Configurations](#managing-configurations).
 
-2. Backup your current system with `mync backup`.
+3. Backup your current system with `mync backup`.
 
-3. Add your workstation's settings to storage with `mync push`.
+4. Add your workstation's settings to storage with `mync push`.
 
-4. Start syncing your workstations with `mync sync`.
+5. Start syncing your workstations with `mync sync`.
 
-5. Check the status of your workstation at anytime using `mync status`.
+6. Check the status of your workstation at anytime using `mync status`.
 
 And finally, on your other workstations, install Mync and instantly backup your workstation and sync your settings with `mync sync`.
 
@@ -143,7 +143,7 @@ By default, Mync uses **iCloud Drive** for storage. If you prefer to use somethi
 
 ## Managing Configurations
 
-Mync using a `.json` file to manage its configuration data. This file can be edited directly using `mync config`. Alternatively, settings can be added or removed from the configuration file using `mync add` or `mync remove`, respectively. It's recommended that all settings within your configuration file follow a few simple rules for best results:
+Mync using a `.json` file to manage its configuration data, which is stored in the given storage location and synced across your workstations. This file can be edited directly using `mync config`. Alternatively, settings can be added or removed from the configuration file using `mync add` or `mync remove`, respectively. It's recommended that all settings within your configuration file follow a few simple rules for best results:
 
 - Keep your setting names **unique**.
 - All `src` paths are always relative to the `storage` location.
