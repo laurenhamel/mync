@@ -80,7 +80,8 @@ program
 // Create `restore` command.
 program
   .command('restore')
-  .description('restores the default workspace settings')
+  .description('restores the default workspace settings') 
+  .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.restore);
 
 // Create `push` command.
@@ -125,3 +126,6 @@ if( ERROR.COMMAND.NONEXISTENT ) {
   program.help();
   
 }
+
+// FOR DEVELOPMENT USE
+/*process.on('unhandledRejection', (reason, promise) => console.log(reason));*/

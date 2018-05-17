@@ -58,6 +58,10 @@ Backs up your workstation's settings
 
 Restores your workstation's settings from its backup
 
+| Options             | Description                                             |
+|---------------------|---------------------------------------------------------|
+| `-v`, `--verbose`   | Outputs additional messages to the console              |
+
 ### `mync push`
 
 Pushes your workstation's settings to storge
@@ -125,7 +129,7 @@ Displays some help
 
 ## Changing Storages
 
-By default, Mync uses **iCloud Drive** for storage. If you prefer to use something else, you can change the storage location using the `mync storage` command or by editing the configuration file directly with `mync config`.  The configuration file has some preset `routes` defined, which can also be used, or you can add your own. These include:
+By default, Mync uses **iCloud Drive** for storage. If you prefer to use something else, you can change the storage location using the `mync storage` command or by editing the configuration file directly with `mync config`. However, the latter method is not recommended unless you're comfortable with manually moving your Mync folder from its old storage location to the new one you decide. In other words, when using the `mync storage` command, two things will happen: (1) your configuration file will be updated with the new storage location and (2) your existing storage folder will be moved to its new location. The configuration file has some preset `routes` defined, which can also be used, or you can add your own. These include:
 
 | Route             | Path                                              |
 |-------------------|---------------------------------------------------|
@@ -140,19 +144,19 @@ By default, Mync uses **iCloud Drive** for storage. If you prefer to use somethi
 | `:gdrive`         | `~/Google Drive/`                                 |
 | `:odrive`         | `~/odrive/`                                       |
 
+> It's worth noting that the configuration file is also used to define your storage directory's name. By default, this folder name is set to `Mync`. Currently, the CLI does not provide a way to change the storage directory's name, but the name could be changed manually if you're opposed to using the default value (i.e. use `mync config` to open and edit the storage directory's name then renaming the physical folder in storage).
 
 ## Managing Configurations
 
-Mync using a `.json` file to manage its configuration data, which is stored in the given storage location and synced across your workstations. This file can be edited directly using `mync config`. Alternatively, settings can be added or removed from the configuration file using `mync add` or `mync remove`, respectively. It's recommended that all settings within your configuration file follow a few simple rules for best results:
+Mync uses a `.json` file to manage its configuration data, which is stored in your preferred storage location for syncing across your workstations. Settings can be added or removed from this configuration file using `mync add` or `mync remove`, respectively, or the `mync storage` command can be used to change Mync's storage location. Alternatively, the configuration file can also be edited directly using `mync config`, but it's not recommended that the storage location be changed in this manner (see [Changing Storages](#changing-storages) for more details). Below are a few simple guidelines for attaining the best results when manging your configurations:
 
 - Keep your setting names **unique**.
-- All `src` paths are always relative to the `storage` location.
-- You can define new `routes` and utilize them like `:route`.
-- The `$username` variable will be replaced with your username on your workstation.
-- Keep `files` and `folders` as immediate children of the `dest` path.
+- Make sure `src` paths are always relative to the `storage` location.
+- For brevity, you can define new `routes` and utilize them as `:route`.
+- The `$username` variable is also available, which gets replaced with your username on your workstation.
+- Keep `files` and `folders` as immediate children of the `dest` path (e.g. `settings.json` not `some/dir/settings.json`).
 
 > Mync will attempt to manipulate all settings given in the configuration file but may run into some permissions errors during execution for certain files and/or folders. For example, Apache and PHP files can be backed up and pushed into storage for universal availability, but Mync will likely run into permissions error when attempting to sync or pull these files with workstations.
-
 
 ## Why Mync
 
