@@ -5,8 +5,7 @@
   "main": "mync.js",
   "scripts": {
     "postinstall": "./lib/postinstall.js",
-    "prepublish": "./lib/prepublish.js",
-    "reset": "node ./lib/prepublish.js"
+    "reset": "node ./lib/reset.js"
   },
   "repository": {
     "type": "git",
