@@ -27,6 +27,7 @@
     "deepcopy": "^0.6.3",
     "deferred-js": "^1.0.2",
     "fs-extra": "^6.0.1",
+    "lodash": "^4.17.15",
     "mkdirp": "^0.5.1",
     "node-machine-id": "^1.1.12",
     "path": "^0.12.7",

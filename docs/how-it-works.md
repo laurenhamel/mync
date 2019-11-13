@@ -1,0 +1,3 @@
+## How It Works
+
+Mync can be configured to backup and sync your system configurations and application settings across various Macs. This can be useful for eliminating the painstaking process of setting up a new workstation or can simply be used to ensure that all of your existing workstations remain in sync. When syncing, Mync will backup your system's current state to the storage location of your choosing and create symbolic links on your system pointing to your stored configuration data. When unsyncing, Mync will replace those symbolic links it previously created with a hard copy of the file or folder it has saved in storage.
