@@ -1,20 +1,14 @@
 #!/usr/bin/env Node
 
 // Load dependencies.
-const program   = require('commander');
-const deepcopy  = require('deepcopy');
-const package   = require('./package.json');
-const commands  = require('./lib/commands.js')();
-const logger    = require('./lib/logger.js')();
-
-// Load utilities.
-require('./lib/prototypes.js');
-
-// Load configurations.
-let config      = deepcopy(require('./data/config.json'));
+const program = require('commander');
+const pkg = require('./package.json');
+const commands = require('./lib/commands');
+const utils = require('./lib/utils');
+const _ = require('lodash');
       
 // Set the program version.
-program .version(package.version);
+program .version(pkg.version);
 
 // Create `storage` command.
 program
@@ -23,106 +17,105 @@ program
   .action(commands.storage);
 
 // Create `config` command.
-program
+/*program
   .command('config [app]')
   .description('opens the configuration file for editing')
   .action(commands.config);
-
+*/
 // Create `list` command.
-program
+/*program
   .command('list')
   .description('lists the settings by name in the configuration file')
   .action(commands.list);
-
+*/
 // Create `info` command.
-program
+/*program
   .command('info [name]')
   .description('gets additional information about a settinging in the configuration file')
   .action(commands.info);
-
+*/
 // Create `sync` command.
-program
+/*program
   .command('sync')
   .description('syncs settings with your workstation')
   .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.sync);
-
-program
+*/
+/*program
   .command('status')
   .description('tells you whether or not your workstation is currently synced with Mync')
   .action(commands.status);
-
+*/
 // Create `unsync` command.
-program
+/*program
   .command('unsync')
   .description('unsyncs settings with your workstation')
   .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.unsync);
-
+*/
 // Create `add` command.
-program
+/*program
   .command('add')
   .description('adds a new setting to the configuration file')
   .action(commands.add);
-
+*/
 // Create `remove` command.
-program
+/*program
   .command('remove [name]')
   .description('removes a setting from the configuration file')
   .action(commands.remove);
-
+*/
 // Create `backup` command.
-program
+/*program
   .command('backup')
   .description('backs up the default workspace settings')
   .action(commands.backup);
-
+*/
 // Create `restore` command.
-program
+/*program
   .command('restore')
   .description('restores the default workspace settings') 
   .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.restore);
-
+*/
 // Create `push` command.
-program 
+/*program 
   .command('push')
   .description('pushes settings from your workstation to storage')
   .option('-o, --overwrite', 'Forces overwriting of existing settings in storage')
   .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.push);
-
+*/
 // Create `pull` command.
-program 
+/*program 
   .command('pull')
   .description('pulls settings from storage to your workstation')
   .option('-o, --overwrite', 'Forces overwriting of existing settings on your workstation')
   .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.pull);
+*/
+
+// Catch instances where an unknown command was given.
+program.on('command:*', () => {
   
+  // Alert the user that an unknown command was given.
+  utils.log.error('An unknown command was given. See below for a list of available commands.');
+  
+  // Then, output the help information.
+  program.help();
+  
+});
+
 // Start the program.
 program.parse(process.argv);
 
-// Capture arguments.
-const ARGV = process.argv.slice(2);
-
-// Catch program errors.
-const ERROR = {
-  COMMAND: {
-    UNKNOWN: ARGV.length > 0 && Object.keys(commands).intersection(ARGV).length === 0,
-    NONEXISTENT: ARGV.length === 0
-  }
-};
-
-if( ERROR.COMMAND.UNKNOWN ) {
+// Catch instances where no command was given.
+if( program.args.length === 0 ) {
   
-  logger.error('An unknown command was given.'); 
+  // Alert the user than a command is required.
+  utils.log.error('A command is required to proceed. See below for a list of available commands.');
   
-  program.help();
-  
-}
-if( ERROR.COMMAND.NONEXISTENT ) {
-  
+  // Then, output the help information.
   program.help();
   
 }

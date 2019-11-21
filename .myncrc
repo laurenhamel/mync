@@ -1,0 +1,23 @@
+# This is the main configuration file for Mync. It should
+# use YAML syntax and formatting for its contents. Use this 
+# file to configure Mync's internally recognized paths, like
+# its preferred storage location.
+
+# Set Mync's default storage location. In order for Mync to sync,
+# across all of your devices, this should be set to a cloud storage
+# drive, such as iCloud or Dropbox. By default, this is set to:
+# STORAGE_VOLUME: ~/.CMVolumes/Dropbox
+STORAGE_VOLUME: ~/.CMVolumes/Dropbox
+
+# Set Mync's default storage directory name. This should be a
+# directory inside the default storage location above that Mync
+# will work with. By default, this is set to:
+# STORAGE_DIRECTORY: Sync
+STORAGE_DIRECTORY: Sync
+
+# Set Mync's default user configuration file name. This is the
+# name of the user configuration file that is stored within the
+# above storage location and provides Mync with a instructions 
+# aboout what to sync and where. By default, this is set to:
+# USER_CONFIG: mync.yaml
+USER_CONFIG: mync.yaml
