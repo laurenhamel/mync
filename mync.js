@@ -13,8 +13,14 @@ program .version(pkg.version);
 // Create `storage` command.
 program
   .command('storage [storage]')
-  .description('sets the storage location')
+  .description('gets/sets the storage location')
   .action(commands.storage);
+
+// Create `status` command.
+program
+  .command('status')
+  .description('indicates if the workstation is currently synced')
+  .action(commands.status);
 
 // Create `config` command.
 /*program
@@ -40,11 +46,6 @@ program
   .description('syncs settings with your workstation')
   .option('-v, --verbose', 'Outputs additional status messages to the console')
   .action(commands.sync);
-*/
-/*program
-  .command('status')
-  .description('tells you whether or not your workstation is currently synced with Mync')
-  .action(commands.status);
 */
 // Create `unsync` command.
 /*program
