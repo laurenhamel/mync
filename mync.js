@@ -37,7 +37,7 @@ program
 // Create `info` command.
 /*program
   .command('info [name]')
-  .description('gets additional information about a settinging in the configuration file')
+  .description('gets additional information about a setting in the configuration file')
   .action(commands.info);
 */
 // Create `sync` command.

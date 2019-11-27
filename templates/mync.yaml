@@ -1,0 +1,10 @@
+# For all synced files and folders, a 'source' and 'destination' location
+# set need to be identified here. The 'source' location should match the folder
+# or file name as it appears within the Sync folder. The 'destination' location
+# should then indicate the target location that the folder or file should
+# be synced to on the local machine.
+#
+# Example:
+#   Adobe: ~/Library/Application Support/Adobe
+
+{{CONFIG}}
