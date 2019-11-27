@@ -6,11 +6,11 @@
 # Set Mync's default storage location. In order for Mync to sync,
 # across all of your devices, this should be set to a cloud storage
 # drive, such as iCloud or Dropbox. By default, this is set to:
-# STORAGE_VOLUME: /Dropbox
-STORAGE_VOLUME: {{STORAGE_VOLUME}}
+# STORAGE_VOLUME: ~/.CMVolumes/Dropbox
+STORAGE_VOLUME: {{{STORAGE_VOLUME}}}
 
 # Set Mync's default storage directory name. This should be a
 # directory inside the default storage location above that Mync
 # will work with. By default, this is set to:
 # STORAGE_DIRECTORY: Sync
-STORAGE_DIRECTORY: {{STORAGE_DIRECTORY}}
+STORAGE_DIRECTORY: {{{STORAGE_DIRECTORY}}}

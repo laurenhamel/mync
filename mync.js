@@ -23,11 +23,11 @@ program
   .action(commands.status);
 
 // Create `config` command.
-/*program
+program
   .command('config [app]')
   .description('opens the configuration file for editing')
   .action(commands.config);
-*/
+
 // Create `list` command.
 /*program
   .command('list')
