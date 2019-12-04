@@ -29,11 +29,11 @@ program
   .action(commands.config);
 
 // Create `list` command.
-/*program
+program
   .command('list')
   .description('lists the settings by name in the configuration file')
   .action(commands.list);
-*/
+
 // Create `info` command.
 /*program
   .command('info [name]')
