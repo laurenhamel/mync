@@ -22,7 +22,6 @@
   "homepage": "https://github.com/laurenhamel/mync#readme",
   "dependencies": {
     "chalk": "^2.4.2",
-    "child_process": "^1.0.2",
     "commander": "^2.20.3",
     "data-store": "^4.0.3",
     "fs-extra": "^6.0.1",
@@ -32,6 +31,7 @@
     "mkdirp": "^0.5.1",
     "mustache": "^3.1.0",
     "node-machine-id": "^1.1.12",
+    "open": "^7.0.0",
     "path": "^0.12.7",
     "tildify": "^1.2.0",
     "untildify": "^3.0.3",
