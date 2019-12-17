@@ -34,12 +34,13 @@ program
   .description('lists the settings by name in the configuration file')
   .action(commands.list);
 
-// Create `info` command.
-/*program
-  .command('info [name]')
-  .description('gets additional information about a setting in the configuration file')
-  .action(commands.info);
-*/
+// Create `backup` command.
+program
+  .command('backup')
+  .description('performs a backup of your workstation configurations')
+  .action(commands.backup);
+
+
 // Create `sync` command.
 /*program
   .command('sync')
@@ -66,12 +67,7 @@ program
   .description('removes a setting from the configuration file')
   .action(commands.remove);
 */
-// Create `backup` command.
-/*program
-  .command('backup')
-  .description('backs up the default workspace settings')
-  .action(commands.backup);
-*/
+
 // Create `restore` command.
 /*program
   .command('restore')
